@@ -1,4 +1,4 @@
-import { getData } from "./register/register.js";
+import { getData } from "./register.js";
 
 const name = document.getElementById('name');
 const lastname = document.getElementById('lastname');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 btn && btn.addEventListener('click', function() {
     let isDelete = confirm('Rostan ham ochirmoqchimisz ?')
     if (isDelete) {
-        // localStorage.removeItem('currentUser');
+        localStorage.removeItem('currentUser');
         const id = window.location.href;
         console.log(id);
         let domain = id.search('head');

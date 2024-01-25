@@ -1,4 +1,4 @@
-import { getData } from "../register/register.js"
+import { getData } from "../register.js"
 // console.log(getData());
 
 const username = document.getElementById('usernamelogin');
@@ -36,6 +36,7 @@ loginbtn && loginbtn.addEventListener('click', function(e) {
             localStorage.setItem('currentUser', username.value)
 
             const id = window.location.href;
+            console.log(id);
             let domain = id.search('login');
             let finnId = id.substring(0, domain)
             console.log(finnId);
@@ -56,5 +57,5 @@ aRegis && aRegis.addEventListener('click', function(e) {
     console.log(domain);
     let finnId = id.substring(0, domain)
     console.log(finnId);
-    window.location.assign(`${finnId}./register/register.html`)
+    window.location.assign(`${finnId}./register.html`)
 })

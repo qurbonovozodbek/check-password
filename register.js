@@ -129,9 +129,11 @@ btn && btn.addEventListener('click', function(e) {
 ahref && ahref.addEventListener('click', function(e) {
     e.preventDefault();
     const id = window.location.href;
+    console.log(id);
     let domain = id.search('register');
+    console.log(domain);
     let finnId = id.substring(0, domain)
     console.log(finnId);
-    window.location.assign(`${finnId}./login/login.html`)
+    window.location.assign(`${finnId}/login/login.html`)
 })
 export { getData }
